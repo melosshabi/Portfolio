@@ -1,0 +1,504 @@
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: rgba(20, 20, 20);
+    font-family: 'Maven Pro', sans-serif;
+    max-width: 100vw;
+}
+::-webkit-scrollbar{
+    width: 5px;
+}
+::-webkit-scrollbar-track{
+    background: rgba(20, 20, 20);
+}
+::-webkit-scrollbar-thumb{
+    background-color: red;
+    border-radius: 15px;
+}
+::-webkit-scrollbar-thumb:hover{
+    background: rgba(255, 0, 0, .5);
+}
+::-webkit-scrollbar-thumb:active{
+    background: rgba(255, 0, 0, .4);
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    color:white;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    box-shadow: -5px -5px 15px red;
+}
+.navbar ul{
+    margin:0;
+    padding:0;
+    display: flex;
+    list-style-type: none;
+    min-height: 100%;
+}
+.navbar li{
+    margin:0;
+    padding:0;
+    min-height: 100%;
+}
+.navbar li a{
+    text-decoration: none;
+    color:white;
+    padding: 20px 20px;
+    display: block;
+    cursor: pointer;
+    text-shadow: 1px 1px 10px red;
+    transition: background-color 500ms, text-shadow 300ms;
+}
+.navbar li a:hover{
+    text-shadow: 1px 1px 20px red;
+    background-color: rgba(95, 95, 95, 0.1);
+}
+
+#introduction{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color:white;
+    border-bottom:1px solid red;
+    position:relative;
+}
+#introduction svg{
+    position: absolute;
+    bottom:0;
+}
+#h1{
+    margin:0 0 15% 0;
+    padding:0;
+    font-size:4em;
+    /* transform: translate(20%, -200%); */
+    color:white;
+    position: relative;
+}
+#h1::before{
+    content: "Hi, my name is ";
+    font-size: 1.5rem;
+    position: absolute;
+    top:-25px;
+}
+#h1::after{
+    content:"I am a web developer";
+    font-size: 1.5rem;
+    position: absolute;
+    top:75px;
+    right:0px;
+    color:rgb(255, 0, 76);
+}
+#about-me{
+    color:white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    border-bottom:1px solid red;
+    position:relative;
+}
+.about-me-text{
+    line-height:1.5;
+    text-align: center;
+    text-shadow: 1px 1px 2px red;
+    opacity: 0;
+    /* transform: scale(0.1); */
+    transform: translateX(-10%);
+    transition: all .8s linear;
+}
+.about-me-text.active{
+    opacity: 1;
+    transform: scale(1);
+}
+#about-me svg{
+    position:absolute;
+    bottom:0px;
+}
+.my-projects{
+    opacity: 0;
+    transform: translateX(-10%);
+    transition: all .8s linear;
+}
+.my-projects.active{
+    opacity: 1;
+    transform: translateX(0%);
+}
+#projects-section{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position:relative;
+}
+#projects-section svg{
+    position: absolute;
+    bottom: 0;
+}
+.projects{
+    margin-bottom: 20%;
+}
+.projects img{
+    height: 300px;
+    width: 500px;
+    border-radius: 5px;
+    box-shadow: 0.1px 0.1px 1px red;
+    cursor: pointer;
+    transition: height 400ms, width 400ms, box-shadow 200ms;
+}
+.projects img:hover{
+    height: 310px;
+    width: 510px;
+    box-shadow: 1px 1px 5px red;
+}
+.projects:first-child{
+    margin-left:1rem;
+    position: relative;
+}
+.projects:nth-child(2){
+    position:relative;
+}
+.projects:last-child{
+    margin-right:1rem;
+    position:relative;
+}
+#weather-link, #quote-link, #color-link{
+    color:white;
+    position: absolute;
+    bottom:-25px;
+    left:50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    text-decoration: none;
+    font-size:1.25rem;
+}
+.projects:last-child{
+    margin-right:1rem;
+}
+span:not(:first-child){
+    color:white;
+    font-size:2em;
+    display: flex;
+    justify-content: center;
+    margin-top:30px;
+}
+.get-in-touch{
+    opacity: 0;
+    transform: translateX(-10%);
+    transition: all .8s linear;
+	margin-bottom:-10%;
+}
+.get-in-touch.active{
+    opacity: 1;
+    transform:translateX(0);
+}
+#contact-section{
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+#contact-section #curve{
+    position: absolute;
+    top:-52%;
+}
+.buttons{
+    display: flex;
+    justify-content: space-between;
+}
+#mail-btn{
+    position: absolute;
+    left:25%;
+    padding:10px 25px;
+    font-size: 2em;
+    background: none;
+    color:white;
+    border:2px solid rgb(255, 0, 76);;
+    border-radius: 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+#linkedin{
+    position: absolute;
+    left:45%;
+    padding:10px 25px;
+    font-size: 2em;
+    background: none;
+    color:white;
+    border:2px solid rgb(255, 0, 76);;
+    border-radius: 15px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+#github{
+    position: absolute;
+    left:65%;
+    padding:10px 25px;
+    font-size: 2em;
+    background: none;
+    color:white;
+    border:2px solid rgb(255, 0, 76);;
+    border-radius: 15px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+} 
+#mail-btn, #linkedin,#github{
+    text-decoration: none;
+    transition: background-color 200ms;
+}
+#mail-btn:hover, #linkedin:hover, #github:hover{
+    background-color: rgba(255, 255, 255, .1);
+}
+.toggle-btn{
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    top:.75rem;
+    right:1rem;
+    padding-bottom:25px;
+    user-select: none;
+}
+.bar{
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    display: none;
+    top:.5rem;
+    right: .5rem;
+    /* margin-top:-10px; */
+    cursor: pointer;
+}
+.bar:first-child{
+    margin-top:1.4rem;
+    
+}
+.bar:not(:first-child){
+    margin-top:-10px;
+    display: none;
+}
+
+@media (max-width:1024px)
+{
+    #projects-section{
+        flex-direction: row;
+        justify-content: center;
+    }
+    .projects{
+        margin-bottom:45%;
+    }
+    .projects img{
+        height: 150px;
+        width: 250px;
+        margin:25px;
+    }
+    .projects img:hover{
+        height: 160px;
+        width: 260px;
+    }
+	#contact-section{
+		min-height:60vh;
+	}
+    #quote-link{
+        font-size: 1.22rem;
+    }
+    #mail-btn{
+        left:10%;
+    }
+    #linkedin{
+        left:40%;
+    }
+    #github{
+        left:70%;
+    }
+}
+
+@media (max-width:820px)
+{
+    body{
+        font-size: 1.3em;
+    }
+    h1{
+        margin-top:12px;
+    }
+    #h1{
+        font-size: 6rem;
+    }
+    #h1::after{
+        top:95px;
+    }
+    .links{
+        display: none;
+        width: 100%;
+        transition: visibility 200ms;
+		margin-bottom:5%;
+    }
+    .navbar{
+        height: 5vh;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .links ul{
+        width: 100%;
+        margin:0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        transform: translateY(-285%);
+    }
+    .links li{
+        width: 100%;
+        height: 15px;
+    }
+    .links li a{
+        text-align: center;
+    }
+    .links.active{
+        display: flex;
+    }
+	.toggle-btn{
+		margin-top:10px;
+	}
+    .bar{
+        display: flex;
+    }
+    .bar:first-child{
+        margin-top:12px;
+    }
+    .bar:not(:first-child){
+        margin-top:-10px;
+        display: flex;
+    }
+    .navbar.active{
+        height: 30vh;
+        color:white;
+        border-bottom: 1px solid red;
+    }
+    #projects-section{
+        display:flex;
+        flex-direction: column;
+    }
+    .projects img{
+        height: 250px;
+        width: 350px;
+    }
+    #contact-section #curve{
+        top:-20%;
+    }
+	.get-in-touch{
+		margin-bottom:-15%;
+	}
+    #mail-btn, #linkedin, #github{
+        font-size: 2rem;
+        padding:5px 15px;
+    }
+    #mail-btn{
+        left:4%;
+    }
+    #linkedin{
+        left:36%;
+    }
+    #github{
+        left:70%;
+    }
+}
+@media (max-width:412px)
+{
+    body{
+        font-size: .7rem;
+    }
+    h1{
+        margin-top:12px;
+    }
+    #h1{
+        font-size: 4rem;
+    }
+    .links{
+        display: none;
+        width: 100%;
+        transition: visibility 200ms;
+        font-size: 1.5em;
+    }
+    .navbar{
+        height: 5vh;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .links ul{
+        width: 100%;
+        margin:0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        transform: translateY(-285%);
+    }
+    .links li{
+        width: 100%;
+        height: 15px;
+    }
+    .links li a{
+        text-align: center;
+    }
+    .links.active{
+        display: flex;
+    }
+	.toggle-btn{
+		margin-top:3px;
+	}
+    .bar{
+        display: flex;
+    }
+    .bar:first-child{
+        margin-top:12px;
+    }
+    .bar:not(:first-child){
+        margin-top:-10px;
+        display: flex;
+    }
+    .navbar.active{
+        height: 35vh;
+        color:white;
+        border-bottom: 1px solid red;
+    }
+    #projects-section{
+        display:flex;
+        flex-direction: column;
+    }
+    .projects img{
+        height: 140px;
+        width: 240px;
+    }
+    #contact-section #curve{
+        top:-20%;
+    }
+    #mail-btn, #linkedin, #github{
+        font-size: .8rem;
+        padding:5px 15px;
+    }
+    #mail-btn{
+        left:2%;
+    }
+    #linkedin{
+        left:32%;
+    }
+    #github{
+        left:68%;
+    }
+	 .get-in-touch{
+        margin-bottom:-10%;
+    }
+}
