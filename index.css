@@ -1,0 +1,396 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@300;400&display=swap');
+*{
+    padding:0;
+    margin:0;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Figtree', sans-serif;
+    overflow-x: hidden;
+}
+.navbar{
+    margin:auto;
+    padding-top:2%;
+    background-color: rgb(62, 18, 122);
+}
+.list-div{
+    width: 35%;
+    margin:auto;
+    text-shadow: 2px 2px 3px black;
+}
+ul{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    font-size: 1.5em;
+}
+ul > li{
+    cursor: pointer;
+    position:relative;
+}
+ul > li::after{
+    position:absolute;
+    content: '';
+    height: 0;
+    width: 0;
+    border-bottom: 3px solid transparent;
+    bottom:0;
+    left:0;
+}
+ul > li:hover::after{
+    height: 3px;
+    width: 100%;
+    border-bottom: 3px solid white;
+    transition:width 0.2s linear;
+}
+a{
+    text-decoration: none;
+    color:white;
+}
+.intro{
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(62, 18, 122);
+    color:white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.melos{
+    font-size: 4em;
+    position:relative;
+}
+.melos::before{
+    content: "Hi, my name is";
+    font-size: 1.5rem;
+    position:absolute;
+    top:-25px;
+}
+.melos::after{
+    content:"I am a web developer";
+    font-size: 1.5rem;
+    position: absolute;
+    top:75px;
+    right: 0px;
+}
+.whoAmI{
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(27,27,27);
+}
+.about-me{
+    width: 40%;
+    color:white;
+    padding-top:5%;
+    padding-left:10%;
+}
+.about-me-title{
+    font-size: 2em;
+}
+.border-div{
+    width: 30%;
+    height: 3px;
+    background-color: rgb(0, 225, 255);
+    margin-top:15%;
+    margin-bottom:15%;
+}
+.about-me-text{
+    font-size: 1.3em;
+}
+.what-i-do{
+    height: 100vh;
+    width: 100vw;
+    position:relative;
+    background-color: rgb(27,27,27);
+    z-index: -2;
+}
+.desk{
+    width: 100%;
+    position:absolute;
+    top:0px;
+    z-index: -1;
+    filter: blur(4px);
+}
+
+.what-i-do-tite-div{
+    position:absolute;
+    top:500px;
+}
+.what-i-do-title{
+    color:white;
+    font-size: 3em;
+    padding-top:5%;
+    padding-left:10%;
+}
+.border-div2{
+    height: 3px;
+    width: 25%;
+    background-color: rgb(0, 225, 255);
+    margin-left: 10%;
+    margin-top:15px;
+}
+.web-dev{
+    width: 40%;
+    margin-top:5%;
+    margin-left:10%;
+    color:white;
+}
+.web-dev h1{
+    font-size: 1.5em;
+    padding-bottom: 5px;
+    vertical-align: middle;
+    display: inline-block;
+}
+.code-icon{
+    fill:white;
+    height: 25px;
+    padding-right: 5px;
+    vertical-align: middle;
+    display: inline-block;
+}
+.web-dev p{
+    margin-top:1%;
+    width: 50%;
+    font-size: 1.2em;
+    text-shadow: 2px 2px 3px black;
+}
+.pen-ruler{
+    height: 25px;
+    fill:white;
+}
+.wrapper-div{
+    display: flex;
+    justify-content: space-between;
+}
+.responsive-design{
+    width: 40%;
+    margin-top:5%;
+    color:white;
+}
+.responsive-design p{
+    margin-top:1%;
+    width: 50%;
+    font-size: 1.2em;
+    text-shadow:2px 2px 3px black;
+}
+.projects-section{
+    width: 100vw;
+    background-color: rgb(27,27,27);
+}
+.projects-section h1{
+    padding-top:5%;
+    padding-left:10%;
+    color:white;
+    font-size: 3em;
+}
+.project1-image-div, .project2-image-div ,.project3-image-div{
+    margin-top:5%;
+    display: flex;
+    justify-content: center;
+}
+.project1-div, .project2-div, .project3-div{
+    width: 95%;
+    display: flex;
+    justify-content: center;
+}
+.project1-img, .project2-img, .project3-img{
+    width: 75%;
+}
+.project1-content, .project2-content, .project3-content{
+    color:white;
+    margin-top:5%;
+    margin-left:15%;
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+}
+.project1-title-div p{
+    margin-top:1%;
+}
+.projects-btns{
+    width: 15%;
+    display: flex;
+    justify-content: space-around;
+}
+.demo, .code{
+    background: none;
+    color:rgb(38,84,145);
+    font-size: 1.2em;
+    border:1px solid rgb(38,84,145);
+    border-radius:2px;
+    padding:5px 10px;
+    cursor: pointer;
+    transition:all 250ms;
+}
+.demo:hover, .code:hover{
+    background-color: rgb(38,84,145);
+    color:White;
+}
+.projects-description{
+    width: 70%;
+    color:white;
+    margin-top:1%;
+    margin-left:15%;
+}
+.project1-tags{
+    width: 15%;
+    color:white;
+    margin-top:5%;
+    margin-left:15%;
+    display: flex;
+    justify-content: space-between;
+}
+.project1-tags p, .project2-tags p, .project3-tags p{
+    color:rgba(255, 255, 255, .2);
+    background-color: rgba(255, 255, 255, .1);
+    padding:5px 10px;
+    border-radius:5px;
+}
+.project2-tags{
+    width: 15%;
+    display: flex;
+    justify-content: space-between;
+    margin-top:5%;
+}
+.project3-tags{
+    width: 25%;
+    display: flex;
+    justify-content: space-between;
+    margin-top:5%;
+    padding-bottom: 5%;
+} 
+@media(max-width:1024px){
+    .list-div{
+        width: 60%;
+    }
+    .projects-btns{
+        width: 30%;
+    }
+    .project1-tags, .project2-tags{
+        width: 30%;
+    }
+    .project3-tags{
+        width: 45%;
+    }
+}
+@media(max-width:912px){
+    .about-me{
+        width: 70%;
+        margin:auto;
+        padding-top:15%;
+    }
+    .about-me-title{
+        font-size: 3em;
+        margin-left:-15%;
+    }
+    .about-me-text{
+        font-size: 2.5em;
+        margin-left:-15%;
+    }
+    .border-div{
+        margin-left: -15%;
+    }
+    .what-i-do{
+        height: 50vh;
+    }
+    .web-dev p{
+        font-size: 1.5em;
+        width: 100%;
+    }
+    .responsive-design p{
+        font-size: 1.5em;
+        width: 100%;
+    }
+}
+@media(max-width:820px){
+    .about-me-title{
+        font-size: 2em;
+    }
+    .about-me-text{
+        font-size: 1.6em;
+    }
+}
+@media(max-width:540px){
+    .list-div{
+        width: 80%;
+        font-size: .9em;
+    }
+    .about-me-text{
+        font-size: 1.3em;
+    }
+    .what-i-do{
+        height: 60vh;
+    }
+    .what-i-do-title{
+        font-size: 2em;
+    }
+    .web-dev{
+        font-size: .8em;
+    }
+    .responsive-design{
+        font-size: .8em;
+    }
+    .projects-btns{
+        width: 45%;
+    }
+    .project1-tags, .project2-tags{
+        width: 45%;
+    }
+    .project3-tags{
+        width: 65%;
+    }
+}
+@media(max-width:414px){
+    .list-div{
+        margin-top:5%;
+        width: 90%;
+    }
+    .web-dev h1, .responsive-design h1{
+        font-size: 1.2em;
+    }
+    .web-dev p, .responsive-design p{
+        font-size: 1em;
+    }
+    .project1-img, .project2-img, .project3-img{
+        width: 100%;
+    }
+    .project1-content, .project2-content, .project3-content{
+        margin-left:10%;
+        width: 85%;
+    }
+    .projects-description{
+        margin-top:10%;
+        margin-left:10%;
+        width: 90%;
+    }
+    .project1-tags{
+        width: 65%;
+        margin-top:10%;
+    }
+}
+@media(max-width:360px){
+    .list-div{
+        width: 95%;
+        font-size: .8em;
+    }
+    .project1-content, .project2-content, .project3-content{
+        margin-left:5%;
+        width: 90%;
+    }
+    .project3-tags{
+        width: 75%;
+    }
+    .border-div2{
+        display: none;
+    }
+}
+@media(max-height:640px){
+    .about-me-title{
+        font-size: 1.2em;
+    }
+    .about-me-text{
+        font-size: 1em;
+    }
+}
