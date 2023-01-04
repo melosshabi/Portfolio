@@ -196,20 +196,20 @@ a{
     color:white;
     font-size: 3em;
 }
-.project1-image-div, .project2-image-div ,.project3-image-div{
+.project1-image-div, .project2-image-div, .project3-image-div,.project4-image-div{
     margin-top:5%;
     display: flex;
     justify-content: center;
 }
-.project1-div, .project2-div, .project3-div{
+.project1-div, .project2-div, .project3-div, .project4-div{
     width: 95%;
     display: flex;
     justify-content: center;
 }
-.project1-img, .project2-img, .project3-img{
+.project1-img, .project2-img, .project3-img, .project4-img{
     width: 75%;
 }
-.project1-content, .project2-content, .project3-content{
+.project1-content, .project2-content, .project3-content, .project4-content{
     color:white;
     margin-top:5%;
     margin-left:15%;
@@ -253,7 +253,7 @@ a{
     display: flex;
     justify-content: space-between;
 }
-.project1-tags p, .project2-tags p, .project3-tags p{
+.project1-tags p, .project2-tags p, .project3-tags p,.project4-tags p{
     color:rgba(255, 255, 255, .2);
     background-color: rgba(255, 255, 255, .1);
     padding:5px 10px;
@@ -266,6 +266,12 @@ a{
     margin-top:5%;
 }
 .project3-tags{
+    width: 15%;
+    display: flex;
+    justify-content: space-between;
+    margin-top:5%;
+}
+.project4-tags{
     width: 25%;
     display: flex;
     justify-content: space-between;
@@ -279,10 +285,10 @@ a{
     .projects-btns{
         width: 30%;
     }
-    .project1-tags, .project2-tags{
+    .project1-tags, .project2-tags, .project3-tags{
         width: 30%;
     }
-    .project3-tags{
+    .project4-tags{
         width: 45%;
     }
 }
@@ -346,10 +352,10 @@ a{
     .projects-btns{
         width: 45%;
     }
-    .project1-tags, .project2-tags{
+    .project1-tags, .project2-tags, .project3-tags{
         width: 45%;
     }
-    .project3-tags{
+    .project4-tags{
         width: 65%;
     }
 }
@@ -364,10 +370,10 @@ a{
     .web-dev p, .responsive-design p{
         font-size: 1em;
     }
-    .project1-img, .project2-img, .project3-img{
+    .project1-img, .project2-img, .project3-img, .project4-img{
         width: 100%;
     }
-    .project1-content, .project2-content, .project3-content{
+    .project1-content, .project2-content, .project3-content, .project4-content{
         margin-left:10%;
         width: 85%;
     }
@@ -386,15 +392,18 @@ a{
         width: 95%;
         font-size: .8em;
     }
-    .project1-content, .project2-content, .project3-content{
+    .project1-content, .project2-content, .project3-content, .project4-content{
         margin-left:5%;
         width: 90%;
     }
-    .project3-tags{
+    .project4-tags{
         width: 75%;
     }
     .border-div2{
         display: none;
+    }
+    .projects-description{
+        margin-left: 15px;
     }
 }
 @media(max-height:640px){
