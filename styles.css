@@ -25,6 +25,10 @@ body{
     border-radius: 5px;
 }
 /* Navbar Styles */
+.mela-logo{
+    width: 100px;
+    margin-top: 10px;
+}
 .navbar{
     height: 10vh;
     width: 100vw;
@@ -35,8 +39,7 @@ body{
     position: 2;
     top:0;
     display: flex;
-    align-items:center;
-    justify-content: flex-end;
+    justify-content: space-between;
     z-index:1;
 }
 .navbar ul{
@@ -97,6 +100,9 @@ body{
     justify-content: space-around;
     list-style: none;
 }
+.mobile-sidebar{
+    display: none;
+}
 .github-icon, .linkedin-icon{
     width: 20px;
     height: 20px;
@@ -119,11 +125,16 @@ body{
     align-items: center;
     justify-content: center;
 }
+.mela-logo-introduction{
+    width: 400px;
+    /* margin-right: -90px; */
+    margin-left:-150px;
+}
 .introduction h2{
     width: 40%;
     position: relative;
     color:var(--hoverTextColor);
-    /* background-color: red; */
+    margin-left:-100px;
 }
 .introduction h2::before{
     content:"Hi, my name is";
@@ -291,6 +302,9 @@ body{
   .introduction h2{
     width: 60%;
   }
+  .introduction h2::after{
+    right:110px;
+  }
   .about-me{
     width: 100%;
   }
@@ -313,6 +327,9 @@ body{
 }
 /* Nest Hub */
 @media only screen and (max-width:1024px) and (max-height:600px){
+    .navbar{
+        width: 100vw;
+    }
     .navbar ul{
         font-size: 1.1em;
     }
@@ -321,9 +338,17 @@ body{
     }
     .introduction h2{
         width: 51%;
+        margin-left: -80px;
+    }
+    .introduction h2::after{
+        right: 13px;
+    }
+    .mela-logo-introduction{
+        width: 350px;
+        margin-left: -90px;
     }
     .about-me h2::after{
-        right: 20px;
+        right: 10px;
     }
     .projects-tags{
         width: 50%;
@@ -409,6 +434,7 @@ body{
     /* The button which expands the sidebar */
     .hamburger-btn{
         display: flex;
+        margin-top: 5%;
         margin-right: 5%;
     }
     .close-hamburger-btn{
@@ -488,6 +514,9 @@ body{
     .about-me h2{
         width: 75%;
     }
+    .about-me h2::after{
+        right:115px;
+    }
     .projects-description{
         font-size: 1em;
     }
@@ -505,11 +534,25 @@ body{
 }
 /* iPad Mini */
 @media only screen and (max-width:768px) and (max-height:1024px){
+    .hamburger-btn{
+        margin-top: 4%;
+    }
+    .mela-logo-introduction{
+        width: 400px;
+        margin-right: 10px;
+    }
     .about-me h2{
         width: 70%;
     }
     .about-me h2::after{
-        right: 45px;
+        right: 40px;
+    }
+    .projects-links{
+        margin-top: 100px;
+    }
+    /* Wrapper of the github and linkedin icons */
+    .sidebar ul{
+        margin-left: 20px;
     }
 }
 /* Surface Duo */
@@ -523,6 +566,22 @@ body{
     .dark-div{
         width: 30vw;
         left:0;
+    }
+    /* Introduction styles */
+    .mela-logo-introduction{
+        width: 300px;
+        margin-left:-90px;
+    }
+    .introduction h2{
+        width: 95%;
+        margin-left: -80px;
+        font-size: 1.2em;
+    }
+    .introduction h2::before{
+        top:-20px;
+    }
+    .introduction h2::after{
+        bottom: -20px;
     }
     /* Sections Styles */
     .about-me h2{
@@ -562,6 +621,10 @@ body{
 }
 /* iPhone XR */
 @media only screen and (max-width:414px) and (max-height:896px) {
+    .hamburger-btn{
+        margin-top: 6%;
+        width: 45px;
+    }
     .mobile-sidebar{
         width: 100vw;
     }
@@ -571,16 +634,30 @@ body{
     .dark-div{
         width: 0;
     }
+    /* Introduction section styles */
+    .introduction h2{
+        font-size: 1em;
+        margin-left: -70px;
+    }
+    .introduction h2::before{
+        top: -20px;
+    }
+    .introduction h2::after{
+        bottom: -20px;
+    }
+    .mela-logo-introduction{
+        width: 250px;
+        margin-left: -70px;
+    }
+    /* About me Section Styles */
     .about-me h2{
         width: 100%;
     }
     .about-me h2::after{
-        /* display: none; */
         right: 0;
         width: 45%;
     }
     .projects-section h2::after{
-        /* display: none; */
         width: 55%;
     }
     .projects{
@@ -627,21 +704,38 @@ body{
         width: 60%;
     }
     .github-icon, .linkedin-icon{
-        width: 35px;
-        height: 35px;
+        width: 25px;
+        height: 25px;
     }
 }
 /* S21FE */
 @media only screen and (max-width:360px) and (max-height:800px){
+    /* Navbar Styles */
     .navbar{
         height: 7vh;
     }
-    .introduction h2{
-        font-size: 1.3em;
+    .mela-logo{
+        margin-left: -20px;
     }
+    .hamburger-btn{
+        height: 25px;
+        width: 38px;
+        margin-top: 4%;
+    }
+    /* Introduction Section Styles */
+    .introduction h2{
+       font-size: .9em;
+       margin-left: -55px;
+    }
+    .mela-logo-introduction{
+        width: 200px;
+        margin-left: -60px;
+    }
+    /* About me section Styles */
     .about-me h2::after{
         width: 35%;
     }
+    /* Projects section styles */
     .projects-section h2::after{
         width: 45%;
     }
