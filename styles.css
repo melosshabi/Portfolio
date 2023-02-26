@@ -54,10 +54,11 @@ body{
 .navbar ul a {
     text-decoration: none;
     color:white;
-    transition:all 200ms;
+    transition:all 400ms;
 }
 .navbar ul a:hover{
     color:var(--hoverTextColor);
+    filter:drop-shadow(0 0 12px var(--hoverTextColor));
 }
 .navbar ul li:last-of-type a{
     color:var(--hoverTextColor);
@@ -108,13 +109,15 @@ body{
     height: 20px;
     cursor: pointer;
     color:white;
-    transition: all 200ms;
+    transition: all 300ms;
 }
 .github-icon:hover{
     color:var(--hoverTextColor);
+    filter:drop-shadow(0 0 10px var(--hoverTextColor));
 }
 .linkedin-icon:hover{
-    fill:var(--hoverTextColor)
+    fill:var(--hoverTextColor);
+    filter:drop-shadow(0 0 10px var(--hoverTextColor));
 }
 /* Sections*/
 .introduction{
@@ -246,20 +249,13 @@ body{
     color:var(--hoverTextColor);
     margin:0px 15px;
     position: relative;
+    transition: color 100ms, filter 400ms;
 }
-.projects-links a::after{
-    position: absolute;
-    content: '';
-    height: 0;
-    width: 0;
-    bottom:0;
-    left:0;
+.projects-links a:hover{
+    filter:drop-shadow(0 0 10px var(--hoverTextColor))
 }
-.projects-links a:hover::after{
-    height: 3px;
-    width: 100%;
-    border-bottom: 1px solid var(--hoverTextColor);
-    transition:width 0.2s linear;
+.projects-links a:active{
+    color:rgb(55, 175, 147);
 }
 /* Contact Section */
 .contact{
