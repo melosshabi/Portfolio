@@ -155,7 +155,6 @@ body{
     right: 34px;
     color:white;
 }
-
 .about-me{
     width: 50%;
     font-size: 1.25em;
@@ -558,7 +557,7 @@ body{
         width: 70vw;
     }
     .mobile-sidebar ul{
-        height: 50%;
+        height: 60%;
     }
     .dark-div{
         width: 30vw;
@@ -619,14 +618,19 @@ body{
 /* iPhone XR */
 @media only screen and (max-width:414px) and (max-height:896px) {
     .hamburger-btn{
-        margin-top: 6%;
-        width: 45px;
+        height: 25px;
+        width: 38px;
+        margin-top: 8%;
+    }
+    .close-hamburger-btn{
+        width: 40px;
+        height: 25px;
     }
     .mobile-sidebar{
         width: 100vw;
     }
     .mobile-sidebar ul{
-        height: 40%;
+        height: 45%;
     }
     .dark-div{
         width: 0;
@@ -711,13 +715,14 @@ body{
     .navbar{
         height: 7vh;
     }
+    .hamburger-btn{
+        margin-top: 5%;
+    }
     .mela-logo{
         margin-left: -20px;
     }
-    .hamburger-btn{
-        height: 25px;
-        width: 38px;
-        margin-top: 4%;
+    .mobile-sidebar ul{
+        height: 58%;
     }
     /* Introduction Section Styles */
     .introduction h2{
