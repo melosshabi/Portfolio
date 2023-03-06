@@ -61,10 +61,11 @@ body{
     filter:drop-shadow(0 0 12px var(--hoverTextColor));
 }
 .navbar ul li:last-of-type a{
+    padding:10px 10px;
     color:var(--hoverTextColor);
 }
 .navbar ul li:last-of-type{
-    padding:10px 10px;
+    padding:10px 0px;
     border:2px solid var(--hoverTextColor);
     border-radius: 5px;
     cursor: pointer;
