@@ -208,7 +208,7 @@ body{
     position: relative;
     margin-bottom: 20%;
 }
-.chat-app, .blog-website, .log-in-system, .to-do-app{
+.projects-img{
     width: 100%;
 }
 .amazon-clone, .youtube-clone{
@@ -395,7 +395,7 @@ body{
         flex-direction: column;
         margin-bottom: 20vh;
     }
-    .projects:nth-of-type(2), .projects:nth-of-type(4), .projects:nth-of-type(6){
+    .projects:nth-of-type(1), .projects:nth-of-type(3), .projects:nth-of-type(5), .projects:nth-of-type(7){
         flex-direction: column-reverse;
     }
     .amazon-clone, .youtube-clone{
@@ -460,6 +460,7 @@ body{
     .navbar{
         height: 5vh;
         position: fixed;
+        z-index: 1;
     }
     .navbar ul{
         display: none;
@@ -482,11 +483,11 @@ body{
         background-color: var(--navbarColor);
         border-left: 1px solid rgba(255, 255, 255, .2);
         position: fixed;
-        display: none;
+        display: block;
         z-index: 4;
         top:0;
-        right: 0;
-        transition: all 200ms linear;
+        right: -50vw;
+        transition: all 250ms;
     }
     .mobile-sidebar ul{
         height: 35%;
@@ -508,17 +509,17 @@ body{
         text-decoration: none;
         font-size: 1.5em;
     }
-    .active{
-        display: block;
+    .active-mobile-sidebar{
+        right:0;
     }
     .dark-div{
         width: 100vw;
         height: 100vh;
         background-color: rgba(0, 0, 0, .5);
-        position: absolute;
+        position: fixed;
         top:0;
-        right:50vw;
-        z-index: 2;
+        right:0;
+        z-index: 1;
         display: none;
     }
     .activeDark{
@@ -640,16 +641,17 @@ body{
     }
     .mobile-sidebar{
         width: 70vw;
+        right:-70vw;
+        z-index: 2;
+    }
+    .active-mobile-sidebar{
+        right: 0;
     }
     .mobile-sidebar ul{
         height: 60%;
     }
     .hamburger-btn, .close-hamburger-btn{
         width: 40px;
-    }
-    .dark-div{
-        width: 30vw;
-        left:0;
     }
     /* Introduction styles */
     .introduction h2{
@@ -716,6 +718,10 @@ body{
     /* Mobile Sidebar */
     .mobile-sidebar{
         width: 100vw;
+        right: -100vw;
+    }
+    .active-mobile-sidebar{
+        right:0;
     }
     .mobile-sidebar ul{
         height: 45%;
@@ -925,6 +931,7 @@ body{
     .projects-section h2{
         width: 90%;
         font-size: 1.8em;
+        margin-bottom: 20%;
     }
     .projects-section h2::after{
         width: 235px;
@@ -1009,6 +1016,9 @@ body{
         width: 170px;
     }
     /* Projects-section */
+    .projects-section h2{
+        margin-bottom: 30%;
+    }
     .projects-section h2::after{
         width: 195px;
     }
@@ -1052,6 +1062,10 @@ body{
     .about-me p{
         font-size: .9em;
     }
+    /* Projects Section */
+    .projects-section h2{
+        margin-bottom: 10%;
+    }
 }
 /* S21FE */
 @media only screen and (max-width:360px) and (max-height:800px){
@@ -1083,6 +1097,17 @@ body{
         font-size: .9em;
     }
     /* Projects section styles */
+    .projects{
+    }
+    .projects-description{
+        max-height: 60%;
+    }
+    .projects-links{
+        margin:0;
+    }
+    .projects-section h2{
+        margin-bottom: 20%;
+    }
     .projects-section h2::after{
         width: 55%;
     }
@@ -1091,7 +1116,6 @@ body{
     }
     .projects-description p{
         font-size: .9em;
-        margin-bottom:30px;
     }
     .projects-links a{
         font-size: 1em;

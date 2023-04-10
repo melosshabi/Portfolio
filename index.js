@@ -7,12 +7,12 @@ let body = document.querySelector('body');
 
 
 expandSidebarBtn.addEventListener('click', () =>{
-   mobileSidebar.classList.add('active')
+   mobileSidebar.classList.add('active-mobile-sidebar')
    darkDiv.classList.add('activeDark')
    body.style.overflow = "hidden";
 })
 shrinkSidebarBtn.addEventListener('click', () =>{
-    mobileSidebar.classList.toggle('active')
+    mobileSidebar.classList.toggle('active-mobile-sidebar')
     darkDiv.classList.remove('activeDark')
     body.style.overflow = "visible";
 })
