@@ -1077,7 +1077,7 @@ body{
         margin-top: 3%;
     }
     .mobile-sidebar ul{
-        height: 50%;
+        height: 55%;
     }
     /* Introduction Section Styles */
     .introduction h2{
@@ -1097,8 +1097,6 @@ body{
         font-size: .9em;
     }
     /* Projects section styles */
-    .projects{
-    }
     .projects-description{
         max-height: 60%;
     }
