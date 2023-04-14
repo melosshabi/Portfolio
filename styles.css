@@ -395,7 +395,7 @@ body{
         flex-direction: column;
         margin-bottom: 20vh;
     }
-    .projects:nth-of-type(1), .projects:nth-of-type(3), .projects:nth-of-type(5), .projects:nth-of-type(7){
+    .projects:nth-of-type(2), .projects:nth-of-type(4), .projects:nth-of-type(6), .projects:nth-of-type(8){
         flex-direction: column-reverse;
     }
     .amazon-clone, .youtube-clone{
