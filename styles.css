@@ -395,7 +395,7 @@ body{
         flex-direction: column;
         margin-bottom: 20vh;
     }
-    .projects:nth-of-type(2), .projects:nth-of-type(4), .projects:nth-of-type(6), .projects:nth-of-type(8){
+    .projects:nth-of-type(2), .projects:nth-of-type(4){
         flex-direction: column-reverse;
     }
     .amazon-clone, .youtube-clone{
@@ -688,7 +688,7 @@ body{
         width: 25%;
     }
     .projects-tags3{
-        width: 50%;
+        width: 55%;
     }
     .contact h2{
         font-size: 2em;
@@ -764,7 +764,7 @@ body{
         font-size: .7em;
     }
     .projects-tags3{
-        width: 45%;
+        width: 55%;
     }
     .projects-links{
         font-size: 1em;
