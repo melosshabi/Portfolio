@@ -771,7 +771,7 @@ body{
     }
 
 }
-/* iPhone XR */
+/* iPhone XR/XS Max */
 @media only screen and (max-width:414px) and (max-height:896px) {
     .navbar{
         height: 6vh;
@@ -834,7 +834,7 @@ body{
         width: 30%;
     }
     .projects-tags3{
-        width: 45%;
+        width: 55%;
     }
     .projects-description{
         margin-top: 10vh;
@@ -955,7 +955,6 @@ body{
     }
     .projects-tags3{
         font-size: .7em;
-        width: 45%;
     }
     /* Contact Section */
     .contact h2{
@@ -1036,7 +1035,7 @@ body{
         margin-bottom: -30px;
     }
     .projects-tags3{
-        width: 50%;
+        width: 60%;
     }
 }
 /* iPhone SE */
@@ -1115,5 +1114,8 @@ body{
     }
     .projects-links a{
         font-size: 1em;
+    }
+    .projects-tags3{
+        width: 65%;
     }
 }
