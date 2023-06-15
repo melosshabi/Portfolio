@@ -1084,9 +1084,6 @@ body{
         height: 7vh;
         width: 100vw;
     }
-    .project1{
-        background-color: blue;
-    }
     .hamburger-btn{
         margin-top: 3%;
     }
@@ -1111,9 +1108,6 @@ body{
         font-size: .9em;
     }
     /* Projects section styles */
-    .project1{
-        /* background-color: red; */
-    }
     .projects-description{
         max-height: 60%;
     }
