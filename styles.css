@@ -211,6 +211,12 @@ body{
 .projects-img{
     width: 100%;
 }
+.mobile-projects{
+    width: 100%;
+}
+.mobile-projects-img{
+    width: 70%;
+}
 .amazon-clone, .youtube-clone{
     width: 90%;
 }
@@ -222,6 +228,9 @@ body{
     flex-direction: column;
     padding:0 10px;
 }
+.projects-description p{
+    text-align: center;
+}
 .projects-tags3, .projects-tags2{
     width: 30%;
     font-size: .8em;
@@ -231,6 +240,9 @@ body{
 }
 .projects-tags2{
     width: 25%;
+}
+.mobile-projects-tags3{
+    width: 50%;
 }
 .projects h3{
     margin-bottom: 10px;
@@ -304,6 +316,9 @@ body{
   }
   .projects-tags3{
     width: 45%;
+  }
+  .mobile-projects-tags3{
+    width: 60%;
   }
   .contact{
     margin:25vh 0;
@@ -395,11 +410,22 @@ body{
         flex-direction: column;
         margin-bottom: 20vh;
     }
-    .projects:nth-of-type(2), .projects:nth-of-type(4){
+    .projects:nth-of-type(2), .projects:nth-of-type(4), .projects:nth-of-type(6){
         flex-direction: column-reverse;
     }
-    .amazon-clone, .youtube-clone{
+    .mobile-projects-img-wrapper{
+        min-height: 85%;
+        width: 50%;
+        overflow: hidden;        
+        margin-bottom: 50px;
+    }
+    .mobile-projects-img{
+        height: 95%;
         width: 100%;
+    }
+    .mobile-projects-tags3{
+        min-width: 80%;
+        margin-left: 10%;
     }
     .projects-description{
         font-size: 1.1em;
@@ -453,6 +479,9 @@ body{
     }
     .projects-tags3{
         width: 45%;
+    }
+    .mobile-projects-tags3{
+        width: 70%;
     }
 }
 /* iPad Air */
@@ -577,11 +606,18 @@ body{
     .projects-links a:hover{
         filter: none;
     }
+    .mobile-projects-links{
+        margin-top: 10%;
+    }
     .projects-tags2{
         width: 25%;
     }
     .projects-tags3{
         width: 40%;
+    }
+    .mobile-projects-tags3{
+        width: 95%;
+        margin-left:2.5%;
     }
     .contact{
         margin: 25vh 0;
@@ -628,6 +664,9 @@ body{
     }
     .projects-links{
         margin-top: 100px;
+    }
+    .mobile-projects{
+        margin-top: 40dvh;
     }
     /* Wrapper of the github and linkedin icons */
     .sidebar ul{
@@ -683,6 +722,9 @@ body{
     .projects-description{
         font-size: .9em;
     }
+    .mobile-projects-img-wrapper{
+        width: 75%;
+    }
     .projects-links a{
         padding:5px 10px;
         font-size: .9em;
@@ -692,6 +734,10 @@ body{
     }
     .projects-tags3{
         width: 60%;
+    }
+    .mobile-projects-tags3{
+        width: 100%;
+        margin:0;
     }
     .contact h2{
         font-size: 2em;
@@ -761,6 +807,12 @@ body{
     .projects-section h2::after{
         left: 150px;
     }
+    .mobile-projects-img-wrapper{
+        width: 70%;
+    }
+    .mobile-projects-img{
+        height: 90%;
+    }
     .projects-tags2, .projects-tags3{
         width: 35%;
         margin-bottom: 50px;
@@ -768,6 +820,9 @@ body{
     }
     .projects-tags3{
         width: 55%;
+    }
+    .mobile-projects-tags3{
+        width: 95%;
     }
     .projects-links{
         font-size: 1em;
@@ -829,6 +884,9 @@ body{
     .projects{
         margin:30vh 0;
     }
+    .mobile-projects{
+        margin-top: 60vh;
+    }
     .projects:first-of-type{
         margin-top:10vh;
     }
@@ -837,6 +895,9 @@ body{
     }
     .projects-tags3{
         width: 55%;
+    }
+    .mobile-projects-tags3{
+        width: 95%;
     }
     .projects-description{
         margin-top: 10vh;
@@ -1031,6 +1092,9 @@ body{
     }
     .projects-section h2::after{
         width: 195px;
+    }
+    .mobile-projects-img-wrapper{
+        width: 90%;
     }
     .projects-description p {
         margin-bottom: 30px;
