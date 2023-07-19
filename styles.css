@@ -123,18 +123,21 @@ body{
 .introduction{
     height: 50vh;
     margin-bottom: 30vh;
+    scroll-margin-top:20vh;
     font-size: 3em;
     display: flex;
     align-items: center;
     justify-content: center;
-    scroll-margin-top:20vh;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.introduction h2{
+.introduction-h2{
     position: relative;
     color:var(--hoverTextColor);
+    margin-left: -12vw;
+    opacity: 0;
+    transition: all .9s;
 }
 .introduction h2::before{
     content:"Hi, my name is";
@@ -156,6 +159,9 @@ body{
     font-size: 1.25em;
     line-height: 1.5;
     scroll-margin-top: 10vh;
+    margin-left: -5vw;
+    opacity: 0;
+    transition: all .9s;
 }
 .about-me h2{
     font-size: 2em;
@@ -179,11 +185,17 @@ body{
     margin:auto;
     margin-top: 10vw;
     color:white;
+    /* background-color: blue; */
 }
 .projects-section{
+    max-width: 100%;
+    /* background-color: red; */
     margin-top: 10%;
-    font-size: 1.25em;
+    margin-left: -5vw;
+    opacity: 0;
     scroll-margin-top: 10vh;
+    font-size: 1.25em;
+    transition: all .9s;
 }
 .projects-section h2{
     font-size: 2em;
@@ -207,6 +219,15 @@ body{
     align-items: center;
     position: relative;
     margin-bottom: 20%;
+    opacity: 0;
+}
+.projects-left{
+    margin-left: -10%;
+    transition: all .9s;
+}
+.projects-right{
+    margin-left: 15%;
+    transition: all .9s;
 }
 .projects-img{
     width: 100%;
@@ -216,9 +237,6 @@ body{
 }
 .mobile-projects-img{
     width: 70%;
-}
-.amazon-clone, .youtube-clone{
-    width: 90%;
 }
 .projects-description{
     height: 100%;
@@ -265,6 +283,11 @@ body{
 .projects-links a:active{
     color:rgb(55, 175, 147);
 }
+/* This class is used to show elements on scroll */
+.visible-elements{
+    opacity: 1;
+    margin-left: 0;
+}
 /* Contact Section */
 .contact{
     height: 40vh;
@@ -273,6 +296,13 @@ body{
     align-items: center;
     justify-content: space-around;
     flex-direction: column;
+    opacity: 0;
+    transform: translateY(200px);
+    transition: all .9s;
+}
+.visible-contact-section{
+    opacity: 1;
+    transform: translateY(0);
 }
 .contact h2{
     font-size: 3.5em;
@@ -764,6 +794,10 @@ body{
         width: 40px;
         margin-top: 5%;
     }
+    /* The div that contains the github and linkedin icons */
+    .sidebar{
+        width: 60%;
+    }
     /* Mobile Sidebar */
     .mobile-sidebar{
         width: 100vw;
@@ -778,6 +812,8 @@ body{
     /* Sections Wrapper */
     .sections-wrapper{
         width: 95vw;
+        /* background-color: red; */
+        padding-bottom: 100px;
     }
     /* Introduction Section */
     .introduction h2{
