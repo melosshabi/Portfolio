@@ -139,6 +139,10 @@ body{
     opacity: 0;
     transition: all .9s;
 }
+.introduction-h2 p{
+    font-size: .3em;
+    color:white;
+}
 .introduction h2::before{
     content:"Hi, my name is";
     font-size:.4em;
@@ -147,11 +151,11 @@ body{
     color:white;
 }
 .introduction h2::after{
-    content:"I'm a web developer";
-    font-size:.4em;
+    content:"I'm a React and React Native developer";
+    font-size:.3em;
     position: absolute;
-    bottom:-30px;
-    right: 0px;
+    bottom:-25px;
+    right: 0;
     color:white;
 }
 .about-me{
@@ -185,11 +189,9 @@ body{
     margin:auto;
     margin-top: 10vw;
     color:white;
-    /* background-color: blue; */
 }
 .projects-section{
     max-width: 100%;
-    /* background-color: red; */
     margin-top: 10%;
     margin-left: -5vw;
     opacity: 0;
@@ -418,7 +420,7 @@ body{
         top:-20px;
     }
     .introduction h2::after{
-        right:25px;
+        /* right:25px; */
         bottom: -20px;
     }
     .about-me{
@@ -493,7 +495,7 @@ body{
         font-size: .5em;
     }
     .introduction h2::after{
-        font-size: .4em;
+        font-size: .3em;
         right: 20px;
     }
     /* About me section */
@@ -611,9 +613,12 @@ body{
     .introduction{
         text-align: center;
     }
-    .introduction h2{
-        width: 50%;
+    .introduction-h2{
+        min-width: 50%;
         text-align: center;
+    }
+    .introduction h2::after{
+        right:10px;
     }
     /* About me Section */
     .about-me h2{
@@ -679,6 +684,9 @@ body{
         height: 40%;
     }
     /* Introduction Section */
+    .introduction-h2{
+        min-width: 54%;
+    }
     .introduction h2::before{
         font-size: .45em;
     }
@@ -736,7 +744,7 @@ body{
     }
     .introduction h2::after{
         bottom: -20px;
-        right: 18px;
+        /* right: 18px; */
     }
     /* Sections Styles */
     .about-me h2{
@@ -812,7 +820,6 @@ body{
     /* Sections Wrapper */
     .sections-wrapper{
         width: 95vw;
-        /* background-color: red; */
         padding-bottom: 100px;
     }
     /* Introduction Section */
@@ -1109,10 +1116,10 @@ body{
         margin-left:0;
     }
     .introduction h2::before{
-        top: -15px;
+        top: -20px;
     }
     .introduction h2::after{
-        bottom: -15px;
+        bottom: -10px;
         right: 50px;
     }
     /* About me Section*/
@@ -1197,7 +1204,7 @@ body{
        margin-left:0;
     }
     .introduction h2::after{
-        right:60px;
+        right:55px;
     }
     /* About me section Styles */
     .about-me h2::after{
