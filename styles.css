@@ -744,7 +744,6 @@ body{
     }
     .introduction h2::after{
         bottom: -20px;
-        /* right: 18px; */
     }
     /* Sections Styles */
     .about-me h2{
@@ -1238,5 +1237,8 @@ body{
     }
     .projects-tags3{
         width: 65%;
+    }
+    .mobile-projects-img-wrapper{
+        margin-bottom: -20px;
     }
 }
