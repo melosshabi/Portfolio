@@ -151,7 +151,7 @@ body{
     color:white;
 }
 .introduction h2::after{
-    content:"I'm a React and React Native developer";
+    content:"I'm a Frontend Developer";
     font-size:.3em;
     position: absolute;
     bottom:-25px;
