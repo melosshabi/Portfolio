@@ -16,9 +16,6 @@ body{
     font-family: 'Hanken Grotesk', sans-serif;
     position: relative;
 }
-html, body{
-    overflow-x: hidden;
-}
 ::-webkit-scrollbar{
     width: 5px;
     background:transparent;
@@ -563,7 +560,7 @@ html, body{
         display: block;
         z-index: 4;
         top:0;
-        right: -50vw;
+        right: -52vw;
         box-shadow: 0 0 5px rgba(255, 255, 255, .3);
         transition: all 350ms ease-in-out;
     }
