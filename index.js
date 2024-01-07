@@ -19,6 +19,7 @@ window.addEventListener('scroll', () => {
     if(scrollY > projects[3].offsetTop) projects[3].classList.add('visible-elements')
     if(scrollY > projects[4].offsetTop) projects[4].classList.add('visible-elements')
     if(scrollY > projects[5].offsetTop) projects[5].classList.add('visible-elements')
+    if(scrollY > projects[6].offsetTop) projects[6].classList.add('visible-elements')
     if(scrollY > contact.offsetTop) contact.classList.add('visible-contact-section')
 })    
 
@@ -27,21 +28,26 @@ const shrinkSidebarBtn = document.querySelector('.close-hamburger-btn');
 const mobileSidebar = document.querySelector('.mobile-sidebar');
 const mobileSidebarLinks = document.querySelectorAll('.mobile-sidebar a');
 const darkDiv = document.querySelector('.dark-div');
+// The variable below holds the li elements of the mobile sidebar
+const sidebarElements = document.querySelectorAll('.mobile-sidebar li');
 
-function toggleSidebar() {
+function toggleSidebar(action) {
     mobileSidebar.classList.toggle('active-mobile-sidebar')
     darkDiv.classList.toggle('activeDark')
 
-    if(document.documentElement.style.overflow === "hidden"){
-        document.documentElement.style.overflow = "visible"
+    if(action === "hide"){
+        document.documentElement.style.overflowY = "visible"
+        sidebarElements.forEach(elem => elem.classList.remove('active-li'))
     }else{
-        document.documentElement.style.overflow = "hidden"
+        document.documentElement.style.overflowY = "hidden"
+        sidebarElements.forEach(elem => elem.classList.add('active-li'))
+
     }
 }
 
-expandSidebarBtn.addEventListener('click', () => toggleSidebar())
-
-shrinkSidebarBtn.addEventListener('click', () => toggleSidebar())
+expandSidebarBtn.addEventListener('click', () => toggleSidebar('show'))
+shrinkSidebarBtn.addEventListener('click', () => toggleSidebar('hide'))
+darkDiv.addEventListener('click', () => toggleSidebar('hide'))
 
 for(let i = 0; i < mobileSidebarLinks.length; i++){
     mobileSidebarLinks[i].addEventListener('click', ()=>{
