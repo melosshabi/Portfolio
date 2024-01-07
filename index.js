@@ -49,10 +49,6 @@ expandSidebarBtn.addEventListener('click', () => toggleSidebar('show'))
 shrinkSidebarBtn.addEventListener('click', () => toggleSidebar('hide'))
 darkDiv.addEventListener('click', () => toggleSidebar('hide'))
 
-for(let i = 0; i < mobileSidebarLinks.length; i++){
-    mobileSidebarLinks[i].addEventListener('click', ()=>{
-        mobileSidebar.classList.remove('active-mobile-sidebar')
-        darkDiv.classList.remove('activeDark');
-        document.documentElement.style.overflowY = 'scroll'
-    })
-}
+mobileSidebarLinks.forEach(link => {
+    link.addEventListener('click', () => toggleSidebar('hide'))
+})
