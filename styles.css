@@ -906,6 +906,9 @@ body{
     .projects-links{
         font-size: 1em;
     }
+    .contact{
+        margin-bottom: 10vh;
+    }
 }
 /* iPhone XR/XS Max */
 @media only screen and (max-width:414px) {
