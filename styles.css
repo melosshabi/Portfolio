@@ -28,6 +28,7 @@ body{
 .mela-logo{
     width: 100px;
     margin-top: 10px;
+    cursor: pointer;
 }
 .navbar{
     height: 10vh;

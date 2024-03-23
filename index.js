@@ -52,3 +52,9 @@ darkDiv.addEventListener('click', () => toggleSidebar('hide'))
 mobileSidebarLinks.forEach(link => {
     link.addEventListener('click', () => toggleSidebar('hide'))
 })
+
+const melaLogo = document.querySelector('.mela-logo')
+melaLogo.addEventListener('click', () => window.scrollTo({
+    top:0,
+    behavior:'smooth'
+}))
