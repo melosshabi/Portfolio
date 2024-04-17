@@ -9,8 +9,6 @@ const contact = document.querySelector('.contact')
 
 window.addEventListener('scroll', () => {
     const scrollY = window.innerWidth > 430 ? window.scrollY + 200 : window.scrollY + 350
-    console.log("ScrollY", scrollY)
-    console.log("Contact", contact.offsetTop)
     if(scrollY > aboutMe.offsetTop) aboutMe.classList.add('visible-elements')
     if(scrollY > projectsSection.offsetTop) projectsSection.classList.add('visible-elements')
     if(scrollY > projects[0].offsetTop) projects[0].classList.add('visible-elements')
