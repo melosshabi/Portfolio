@@ -17,8 +17,8 @@ window.addEventListener('scroll', () => {
     if(scrollY > projects[3].offsetTop) projects[3].classList.add('visible-elements')
     if(scrollY > projects[4].offsetTop) projects[4].classList.add('visible-elements')
     if(scrollY > projects[5].offsetTop) projects[5].classList.add('visible-elements')
-    if(scrollY > projects[6].offsetTop) projects[6].classList.add('visible-elements')
-    if(scrollY > projects[7].offsetTop) projects[7].classList.add('visible-elements')
+    // if(scrollY > projects[6].offsetTop) projects[6].classList.add('visible-elements')
+    // if(scrollY > projects[7].offsetTop) projects[7].classList.add('visible-elements')
     if(scrollY > contact.offsetTop) contact.classList.add('visible-contact-section')
     
     if(scrollY < aboutMe.offsetTop) aboutMe.classList.remove('visible-elements')
@@ -29,8 +29,8 @@ window.addEventListener('scroll', () => {
     if(scrollY < projects[3].offsetTop) projects[3].classList.remove('visible-elements')
     if(scrollY < projects[4].offsetTop) projects[4].classList.remove('visible-elements')
     if(scrollY < projects[5].offsetTop) projects[5].classList.remove('visible-elements')
-    if(scrollY < projects[6].offsetTop) projects[6].classList.remove('visible-elements')
-    if(scrollY < projects[7].offsetTop) projects[7].classList.remove('visible-elements')
+    // if(scrollY < projects[6].offsetTop) projects[6].classList.remove('visible-elements')
+    // if(scrollY < projects[7].offsetTop) projects[7].classList.remove('visible-elements')
     if(scrollY < contact.offsetTop) contact.classList.remove('visible-contact-section')
 })    
 
