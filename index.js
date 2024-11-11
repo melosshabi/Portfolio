@@ -48,10 +48,18 @@ function toggleSidebar(action) {
 
     if(action === "hide"){
         document.documentElement.style.overflowY = "visible"
-        sidebarElements.forEach(elem => elem.classList.remove('active-li'))
+        sidebarElements.forEach((elem, index) => {
+            elem.classList.remove('active-li')
+        })
     }else{
         document.documentElement.style.overflowY = "hidden"
-        sidebarElements.forEach(elem => elem.classList.add('active-li'))
+        sidebarElements.forEach((elem, index) => {
+            if(index > 0){
+                setTimeout(() => elem.classList.add('active-li'), parseInt(`${index}00`) + 50)
+                return
+            }
+            elem.classList.add('active-li')
+        })
     }
 }
 
