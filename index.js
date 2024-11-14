@@ -43,12 +43,13 @@ const darkDiv = document.querySelector('.dark-div');
 const sidebarElements = document.querySelectorAll('.mobile-sidebar li');
 
 function toggleSidebar(action) {
-    const timeouts = []
+    let timeouts = []
     mobileSidebar.classList.toggle('active-mobile-sidebar')
     darkDiv.classList.toggle('activeDark')
 
     if(action === "hide"){
         timeouts.forEach(timeout => clearTimeout(timeout))
+        timeouts = []
         document.documentElement.style.overflowY = "visible"
         sidebarElements.forEach(elem => {
             elem.classList.remove('active-li')
