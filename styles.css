@@ -166,7 +166,7 @@ body{
     color:white;
 }
 .introduction h2::after{
-    content:"I'm a Frontend Developer";
+    content:"I'm a Full-Stack Developer";
     font-size:.3em;
     position: absolute;
     bottom:-25px;
