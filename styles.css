@@ -167,7 +167,7 @@ body{
 }
 .introduction h2::after{
     content:"I'm a Full-Stack Developer";
-    font-size:.3em;
+    font-size:.4em;
     position: absolute;
     bottom:-25px;
     right: 0;
