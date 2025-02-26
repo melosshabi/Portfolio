@@ -3,6 +3,7 @@
     --navbarColor:rgb(9, 24, 47);
     --bodyColor:rgb(10, 25, 47);
     --hoverTextColor:rgb(95, 243, 209);
+    --linkHoverColor:rgba(95, 243, 209, .2)
 }
 *{
     margin:0;
@@ -31,7 +32,7 @@ body{
     cursor: pointer;
 }
 .navbar{
-    height: 10vh;
+    height: 8vh;
     width: 100vw;
     background: var(--navbarColor);
     color:white;
@@ -75,12 +76,7 @@ body{
     background-color: rgba(95, 243, 209, .1);
 }
 .hamburger-btn, .close-hamburger-btn{
-    width: 50px;
-    height: 35px;
     display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-end;
 }
 .close-hamburger-btn{
     width: 50px;
@@ -246,9 +242,6 @@ body{
 .mobile-projects{
     width: 100%;
 }
-.mobile-projects-img{
-    width: 70%;
-}
 .projects-description{
     height: 100%;
     display: flex;
@@ -260,7 +253,7 @@ body{
 .projects-description p{
     text-align: center;
 }
-.projects-tags3, .projects-tags2{
+.projects-tags3, .projects-tags2, .mobile-projects-tags2, .mobile-projects-tags3{
     font-size: .8em;
     color:rgba(255, 255, 255, .5);
     display:flex;
@@ -273,7 +266,7 @@ body{
     width: 50%;
 }
 .mobile-projects-tags3{
-    width: 50%;
+    width: 100%;
 }
 .projects h3{
     margin-bottom: 10px;
@@ -336,7 +329,7 @@ body{
 }
 /* Media Queries */
 /* Laptops */
-@media only screen and (max-width:1283px){
+@media only screen and (max-width:1280px){
      /* Navbar */
     .navbar ul{
         width: 35vw;
@@ -364,21 +357,13 @@ body{
     .projects-tags3{
         width: 45%;
     }
-    .mobile-projects-tags3{
-        width: 70%;
-    }
     .contact{
         margin:25vh 0;
     }
 }   
-/* Nest Hub */
 @media only screen and (max-width:1024px){
     body, html{
         overflow-x:hidden;
-    }
-    .navbar{
-        width: 100vw;
-        height: 12vh;
     }
     .navbar ul{
         width: 50%;
@@ -400,146 +385,88 @@ body{
         height: 65vh;
     }
 }
-/* Surface Pro 7 */
-@media only screen and (max-width:912px){
-    /* Navbar */
-    .navbar{
-        height: 5vh;
-    }
+@media only screen and (max-width:768px){
     .navbar ul{
-        width: 50%;
+        width: 60%;
         font-size: 1em;
-        margin-right: 20px;
-    }
-    .sections-wrapper{
-        width: 95vw;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
     }
     /* Introduction Section */
-    .introduction{
-        width: 100%;
-        margin-top: 15vh;
+    .introduction-h2{
+        min-width: 54%;
     }
-    .introduction h2{
-        font-size: 1.2em;
-    }
-    /* About Section */
-    .about-me{
-        width: 100%;
-        font-size: 1.5em;
-        margin-bottom: 20vh;
-    }
+    /* About section */
     .about-me h2::after{
-        left:25%;
+        left:35%;
     }
     /* Projects */
-    .projects-section{
-        font-size: 1.5em;
-    }
-    .projects-section h2::after{
-        left:21%;
-    }
     .projects{
-        height: fit-content;
         flex-direction: column;
     }
-    .projects-right{
+    .projects:nth-of-type(2), .projects:nth-of-type(4), .projects:nth-of-type(6){
         flex-direction: column-reverse;
     }
-    .mobile-projects-img-wrapper{
-        min-height: 85%;
-        width: 50%;
-        overflow: hidden;        
-        margin-bottom: 50px;
-    }
-    .mobile-projects-img{
-        height: 95%;
-        width: 100%;
-    }
-    .wallpaper-app-img{
-        height: 40dvh;
-    }
-    .mobile-projects-tags3{
-        min-width: 80%;
-        margin-left: 10%;
-    }
-    .projects-description{
-        font-size: 1.1em;
-        margin-top: 5vh;
+    .projects-section h2::after{
+        left:30%;
     }
     .projects-links{
-        font-size: 1.3em;
+        margin-top: 100px;
     }
-    .projects-tags2{
-        width: 20%;
+    .projects-links a {
+        border:1px solid var(--hoverTextColor);
+        padding:10px 15px;
+        border-radius: 10px;
+        transition:all linear 200ms;
+    }
+    .projects-links a:hover{
+        background-color: var(--linkHoverColor);
+        filter:none;
+    }
+    .projects-image-wrapper{
+        margin-bottom: 50px;
     }
     .projects-tags3{
-        width: 30%;
-    }
-    .contact p{
-        font-size: 1.6em;
-    }
-    .contact a{
-        font-size: 1.8em;
-    }
-}
-@media only screen and (max-width:900px){
-    .navbar ul{
-        width: 50%;
-        margin-right: 10px;
-    }
-    .sections-wrapper{
-        width: 85vw;
-    }
-    /* Introduction Section */
-    .introduction h2{
-        font-size: 1.2em;
-    }
-    /* About me section */
-    .about-me{
         width: 100%;
     }
-    .about-me h2::after{
-        left:29%;
+    .mobile-projects-image-wrapper{
+        width: 60%;
     }
-    /* Projects Sections */
-    .projects-section h2::after{
-        left:25%;
+    .contact h2{
+        font-size: 3em;
     }
-    .projects-tags2{
-        width: 35%;
-    }
-    .projects-tags3{
-        width: 45%;
-    }
-    .mobile-projects-tags3{
-        width: 70%;
+    .contact p {
+        font-size: 1.3em;
+        text-align: center;
     }
 }
-/* iPad Air */
-@media only screen and (max-width:834px){
+@media only screen and (max-width:540px){
     .navbar{
         height: 7vh;
-        position: fixed;
-        z-index: 1;
     }
     .navbar ul{
         display: none;
     }
-    /* The button which expands the sidebar */
+    .mela-logo{
+        width: 50px;
+    }
     .hamburger-btn{
-        display: flex;
-        margin-top: 2%;
+        margin-top: 4%;
         margin-right: 5%;
     }
-    .close-hamburger-btn{
+    .hamburger-btn, .close-hamburger-btn{
         display: flex;
-        margin:5% 5%;
+        width: 40px;
+        height: 25px;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+    .close-hamburger-btn{
+        height: 50px;
+        transform: scale(1.5) translate(10px, 20px);
+    
     }
     .mobile-sidebar{
-        width: 50vw;
+        width: 80vw;
         height: 100vh;
         background-color: var(--navbarColor);
         border-left: 1px solid rgba(255, 255, 255, .2);
@@ -547,7 +474,7 @@ body{
         display: block;
         z-index: 4;
         top:0;
-        right: -52vw;
+        right: -80vw;
         box-shadow: 0 0 5px rgba(255, 255, 255, .3);
         transition: all 350ms ease-in-out;
     }
@@ -560,15 +487,6 @@ body{
         justify-content: space-around;
         text-align: center;
     }
-    .list-elems{
-        height: 15%;
-        opacity: 0;
-        margin-left: 10%;
-        transition: all 250ms linear 300ms;
-    }
-    .list-elems:active{
-        background-color: rgba(255, 255, 255, .3);
-    }
     .mobile-sidebar a {
         min-width: 100%;
         min-height: 100%;
@@ -579,11 +497,7 @@ body{
         line-height: 2.5;
     }
     .active-mobile-sidebar{
-        right:0;
-    }
-    .active-li{
-        opacity: 1;
-        margin:0;
+        right: 0;
     }
     .dark-div{
         width: 100vw;
@@ -598,150 +512,6 @@ body{
     .activeDark{
         display: block;
     }
-    /* Sidebar */
-    .sidebar{
-        width: 30%;
-        right: 50%;
-        position: absolute;
-        transform: translateX(50%);
-    }
-    .github-icon, .linkedin-icon{
-        width: 40px;
-        height: 40px;
-    }
-    .sidebar ul{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-around;
-    }
-    /* Sections */
-    .sections-wrapper{
-        display: flex;
-        flex-direction: column;
-        z-index: -5;
-    }
-    /* Introduction Section */
-    .introduction{
-        text-align: center;
-    }
-    .introduction-h2{
-        min-width: 50%;
-        text-align: center;
-    }
-    /* About section */
-    .about-me h2::after{
-        left:32%;
-    }
-    /* Projects */
-    .projects-section h2::after{
-        left:27%;
-    }
-    .projects-right{
-        flex-direction: column-reverse;
-    }
-    .projects-left{
-        flex-direction: column;
-    }
-    .projects-title{
-        font-size: 1em;
-    }
-    .projects-description{
-        font-size: .8em;
-    }
-    .projects-links{
-        margin-top: 10%;
-    }
-    .projects-links a{
-        padding:10px 15px;
-        border:1px solid var(--hoverTextColor);
-        border-radius: 5px;
-    }
-    .projects-links a:hover{
-        filter: none;
-    }
-    .projects-tags2{
-        width: 25%;
-    }
-    .projects-tags3{
-        width: 40%;
-    }
-    .mobile-projects-tags3{
-        width: 95%;
-        margin-left:2.5%;
-    }
-    /* Contact Section */
-    .contact{
-        margin: 25vh 0;
-    }
-    .contact h2{
-        font-size: 3em;
-    }
-    .contact p{
-        font-size: 1.3em;
-        text-align: center;
-    }
-    .contact a{
-        font-size: 1.3em;
-    }
-    .github-icon, .linkedin-icon{
-        width: 30px;
-    }
-}
-/* iPad Mini */
-@media only screen and (max-width:768px){
-    .navbar{
-        height: 8vh;
-    }
-    .hamburger-btn{
-        margin-top: 2.5%;
-    }
-    /* Mobile Sidebar */
-    .mobile-sidebar ul{
-        height: 40%;
-    }
-    /* Introduction Section */
-    .introduction-h2{
-        min-width: 54%;
-    }
-    /* About section */
-    .about-me h2::after{
-        left:35%;
-    }
-    /* Projects */
-    .projects-section h2::after{
-        left:30%;
-    }
-    .projects-links{
-        margin-top: 100px;
-    }
-    /* Wrapper of the github and linkedin icons */
-    .sidebar ul{
-        margin-left: 20px;
-    }
-}
-/* Surface Duo */
-@media only screen and (max-width:540px){
-    .navbar{
-        height: 7vh;
-    }
-    .mela-logo{
-        width: 50px;
-    }
-    .mobile-sidebar{
-        width: 70vw;
-        right:-70vw;
-        z-index: 2;
-    }
-    .active-mobile-sidebar{
-        right: 0;
-    }
-    .mobile-sidebar ul{
-        height: 60%;
-    }
-    .hamburger-btn, .close-hamburger-btn{
-        width: 50px;
-    }
     /* Introduction */
     .introduction h2{
         font-size: 1.2em;
@@ -751,49 +521,21 @@ body{
         left:48%;
     }
     /* Projects */
-    .projects-section h2::after{
-        left:40%;
-    }
-    .projects{
-        height: fit-content;
-    }
     .projects-description{
         font-size: .9em;
     }
-    .mobile-projects-img-wrapper{
-        width: 75%;
+    .mobile-projects-image-wrapper{
+        width: 80%;
     }
-    .projects-links a{
-        padding:5px 10px;
-        font-size: .9em;
+    .sidebar{
+        width: 30%;
+        right: 50%;
+        position: absolute;
+        transform: translateX(50%);
     }
-    .projects-tags2{
-        width: 35%;
-    }
-    .projects-tags3{
-        width: 60%;
-    }
-    .mobile-projects-tags3{
-        width: 100%;
-        margin:0;
-    }
-    .wallpaper-app-img{
-        width: 50vw;
-        height: 65vh;
-    }
-    .contact h2{
-        font-size: 2em;
-    }
-    .contact p {
-        font-size: 1em;
-    }
-    .contact a{
-        font-size: 1.2em;
-        padding:15px 15px;
-    }
-    .github-icon, .linkedin-icon{
-        height: 25px;
-        width: 25px;
+    .sidebar ul{
+        display: flex;
+        flex-direction: row;
     }
 }
 /* iPhone 14 Pro Max/13 Pro Max/12 Pro Max */
@@ -849,9 +591,6 @@ body{
     .mobile-projects-img{
         height: 90%;
     }
-    .wallpaper-app-img{
-        width: 80dvw;
-    }
     .projects-tags2, .projects-tags3{
         width: 35%;
         margin-bottom: 50px;
@@ -870,256 +609,11 @@ body{
         margin-bottom: 10vh;
     }
 }
-/* iPhone XR/XS Max */
-@media only screen and (max-width:414px) {
-    .navbar{
-        height: 6vh;
-    }
-    .hamburger-btn{
-        height: 25px;
-        width: 38px;
-    }
-    .mela-logo{
-        width: 50px;
-    }
-    .close-hamburger-btn{
-        width: 40px;
-        height: 25px;
-    }
-    .mobile-sidebar{
-        width: 100vw;
-    }
-    .mobile-sidebar ul{
-        height: 55%;
-    }
-    .dark-div{
-        width: 0;
-    }
-    .sections-wrapper{
-        width: 95vw;
-    }
-    /* Introduction section styles */
-    .introduction h2{
-        font-size: 1em;
-    }
-    /* About me */
-    .about-me h2::after{
-        left:44%;
-    }
-    /* Projects */
-    .projects-section h2::after{
-        width: 200px
-    }
-    .projects{
-        margin:30vh 0;
-    }
-    .projects:first-of-type{
-        margin-top:10vh;
-    }
-    .projects-tags2{
-        width: 35%;
-    }
-    .projects-tags3{
-        width: 55%;
-    }
-    .mobile-projects-tags3{
-        width: 95%;
-    }
-    .projects-description{
-        margin-top: 10vh;
-        font-size: .8em;
-    }
-    .projects-links{
-        width: 90%;
-        margin-top:5vh;
-        display: flex;
-        justify-content: space-around;
-    }
-    .projects-links a{
-        font-size: 1em;
-    }
-    .contact{
-        width: 100%;
-        margin:0;
-    }
-    .contact h2{
-        font-size: 2.5em;
-    }
-    .contact p{
-        font-size: 1.3em;
-    }
-    .contact a{
-        font-size: 1.3em;
-        padding:15px 25px;
-    }
-    /* Sidebar with the GitHub and Linkedin icons */
-    .sidebar{
-        width: 60%;
-    }
-    .github-icon, .linkedin-icon{
-        width: 25px;
-        height: 25px;
-    }
-}
-/* S20 Ultra */
-@media only screen and (max-width:412px){
-    .navbar{
-        height: 7vh;
-    }
-    .close-hamburger-btn{
-        width: 40px;
-        height: 30px;
-    }
-    /* Mobile Sidebar */
-    .mobile-sidebar{
-        width: 100vw;
-    }
-    .mobile-sidebar ul{
-        height: 45%;
-    }
-    .sections-wrapper{
-        width: 100vw;
-    }
-    /* Introduction Section */
-    .introduction h2{
-        font-size: 1em;
-    }
-    /* About me Section */
-    .about-me{
-        width: 98%;
-    }
-    /* Projects Section */
-    .projects-section{
-        width: 98%;
-    }
-    .projects-section h2{
-        width: 90%;
-        font-size: 1.8em;
-        margin-bottom: 20%;
-    }
-    .projects-section h2::after{
-        left:48%;
-    }
-    .projects:first-of-type{
-        margin:0 0 20% 0;
-    }
-    .projects{
-        margin:55% 0;
-    }
-    .projects-description h3{
-        font-size: 1.4em;
-        margin-bottom: 20px;
-    }
-    .projects-section p, .projects-links{
-        font-size: 1em;
-    }
-    .projects-tags2{
-        font-size: .7em;
-        width: 35%;
-    }
-    .projects-tags3{
-        font-size: .7em;
-    }
-    /* Contact Section */
+@media screen and (max-width:376px) {
     .contact h2{
         font-size: 2em;
     }
     .contact p{
         font-size: 1em;
-    }
-    .contact a{
-        font-size: 1em;
-        padding:15px 30px;
-    }
-    .github-icon, .linkedin-icon{
-        width: 20px;
-    }
-}
-/* iPhone 11 Pro */
-@media only screen and (max-width:376px){
-    .navbar{
-        align-items: center;
-    }
-    /* Mobile Sidebar */
-    .mobile-sidebar ul{
-        height: 50%;
-    }
-    /* Introduction Sections */
-    .introduction h2{
-        font-size: 1em;
-    }
-    /* About me Section*/
-    .about-me h2, .projects-section h2{
-        font-size: 1.7em;
-    }
-    /* Projects-section */
-    .projects-section h2{
-        margin-bottom: 30%;
-    }
-    .projects-section h2::after{
-        width: 195px;
-    }
-    .mobile-projects-img-wrapper{
-        width: 80dvw;
-    }
-    .mobile-projects-img{
-        min-width: 100%;
-    }
-    .projects-description p {
-        margin-bottom: 30px;
-    }
-    .projects-description h3{
-        font-size: 1.2em;
-    }
-    .projects-description p{
-        font-size: 1em;
-    }
-    .projects-links{
-        font-size: 1em;
-    }
-    .projects-tags3{
-        width: 100%;
-    }
-}
-/* S21FE */
-@media only screen and (max-width:360px){
-    /* Navbar Styles */
-    .navbar{
-        height: 7vh;
-        width: 100vw;
-    }
-    .mobile-sidebar ul{
-        height: 55%;
-    }
-    /* Introduction Section Styles */
-    .introduction h2{
-        font-size: .9em;
-    }
-    /* About me */
-    .about-me h2::after{
-        width: 165px;
-        left:50%;
-    }
-    /* Projects section */
-    .projects-section h2::after{
-        width: 165px;
-    }
-    .projects-description{
-        max-height: 60%;
-    }
-    .projects-links{
-        margin:0;
-    }
-    .projects-description h3{
-        font-size: 1.2em;
-    }
-    .projects-description p{
-        font-size: .9em;
-    }
-    .projects-links a{
-        font-size: 1em;
-    }
-    .mobile-projects-img-wrapper{
-        margin-bottom: -20px;
     }
 }
