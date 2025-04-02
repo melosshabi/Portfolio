@@ -487,6 +487,15 @@ body{
         justify-content: space-around;
         text-align: center;
     }
+    .list-elems {
+        opacity: 0;
+        margin-left: 15px;
+        transition:all 250ms ease-in;
+    }
+    .active-li{
+        opacity:1;
+        margin-lefT:0;
+    }
     .mobile-sidebar a {
         min-width: 100%;
         min-height: 100%;
