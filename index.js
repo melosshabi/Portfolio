@@ -19,6 +19,7 @@ window.addEventListener('scroll', () => {
     if(scrollY > projects[5].offsetTop) projects[5].classList.add('visible-elements')
     if(scrollY > projects[6].offsetTop) projects[6].classList.add('visible-elements')
     if(scrollY > projects[7].offsetTop) projects[7].classList.add('visible-elements')
+    if(scrollY > projects[8].offsetTop) projects[8].classList.add('visible-elements')
     if(scrollY > contact.offsetTop) contact.classList.add('visible-contact-section')
     
     if(scrollY < aboutMe.offsetTop) aboutMe.classList.remove('visible-elements')
@@ -31,6 +32,7 @@ window.addEventListener('scroll', () => {
     if(scrollY < projects[5].offsetTop) projects[5].classList.remove('visible-elements')
     if(scrollY < projects[6].offsetTop) projects[6].classList.remove('visible-elements')
     if(scrollY < projects[7].offsetTop) projects[7].classList.remove('visible-elements')
+    if(scrollY < projects[8].offsetTop) projects[8].classList.remove('visible-elements')
     if(scrollY < contact.offsetTop) contact.classList.remove('visible-contact-section')
 })    
 
@@ -58,7 +60,6 @@ function toggleSidebar(action) {
         document.documentElement.style.overflowY = "hidden"
         sidebarElements.forEach((elem, index) => {
             if(index === 0){
-                console.log(true)
                 timeouts.push(setTimeout(() => elem.classList.add("active-li"), 250))
             }
             if(index > 0){
