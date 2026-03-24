@@ -8,12 +8,12 @@ export default function Home() {
   return (
     <div className="py-22">
       <main className="min-h-[50dvh] flex items-center justify-center">
-        <div className="flex flex-col items-start px-8 gap-1">
-          <p className="text-primary font-semibold">Hi, I'm</p>
-          <h1 className="text-5xl font-extrabold uppercase">
+        <div className="flex flex-col items-start px-8 gap-1 lg:w-140">
+          <p className="text-primary font-semibold 2xl:text-3xl">Hi, I'm</p>
+          <h1 className="text-5xl font-extrabold uppercase 2xl:text-6xl">
             Melos <br /> <span className="text-primary">Shabi</span>
           </h1>
-          <p>
+          <p className="sm:w-3/5 lg:w-full 2xl:text-lg">
             I'm a <span className="text-primary">Full Stack Developer</span>{" "}
             specializing in Crafting Digital Experiences with Code. Specializing
             in high-performance architecture and immersive visual interfaces.
@@ -22,9 +22,14 @@ export default function Home() {
       </main>
 
       {/*About me*/}
-      <section className="px-8">
-        <h2 className="text-2xl mb-2 font-semibold text-primary">About Me</h2>
-        <p>
+      <section
+        className="px-8 scroll-mt-18 md:w-3/4 lg:w-140 lg:m-auto 2xl:my-10"
+        id="about-me"
+      >
+        <h2 className="text-2xl mb-2 font-semibold text-primary 2xl:text-4xl 2xl:mb-4 2xl:text-center">
+          About Me
+        </h2>
+        <p className="2xl:text-lg 2xl:text-center">
           I’m a full-stack developer passionate about creating websites and apps
           that are not only visually appealing but also intuitive and
           user-friendly. With expertise in modern front-end technologies like
@@ -41,14 +46,15 @@ export default function Home() {
       </section>
 
       {/*Projects*/}
-      <section className="px-8 mt-20">
-        <p className="text-primary font-semibold uppercase">
+      <section className="px-8 mt-20 scroll-mt-18" id="projects">
+        <p className="text-primary font-semibold uppercase lg:w-140 lg:m-auto lg:px-8 xl:text-center">
           Selected Projects
         </p>
-        <h2 className="uppercase mt-2 text-4xl font-bold">
-          Engineered <br /> <span className="opacity-40">Experiences.</span>
+        <h2 className="uppercase mt-2 text-4xl font-bold lg:w-140 lg:m-auto lg:px-8 xl:text-center">
+          Engineered <br />
+          <span className="opacity-40">Experiences</span>
         </h2>
-        <div className="mt-8 flex flex-col gap-12">
+        <div className="mt-8 flex flex-col gap-12 md:grid md:grid-cols-2 lg:grid-cols-3 lg:gap-3">
           <Project
             image={quranvoc}
             skills={[
@@ -79,8 +85,8 @@ export default function Home() {
           />
         </div>
       </section>
-
-      <section className="px-8 mt-24">
+      {/*Contact*/}
+      <section className="px-8 mt-24 scroll-mt-18" id="contact">
         <h2 className="uppercase mt-2 text-3xl font-bold text-center">
           Let's Collaborate
         </h2>
@@ -95,7 +101,7 @@ export default function Home() {
           <a
             href="https://www.github.com/melosshabi"
             target="_blank"
-            className="bg-neutral-third p-4 flex justify-between items-center cursor-pointer transition-all duration-200 hover:bg-neutral-fourth "
+            className="bg-neutral-third p-4 flex justify-between items-center cursor-pointer transition-all duration-200 hover:bg-neutral-fourth lg:w-2/5 lg:m-auto"
           >
             <p className="font-medium text-lg">GitHub</p>
             <ArrowUpRight className="text-primary" />
@@ -103,7 +109,7 @@ export default function Home() {
           <a
             href="https://www.linkedin.com/in/melosshabi/"
             target="_blank"
-            className="bg-neutral-third p-4 flex justify-between items-center cursor-pointer transition-all duration-200 hover:bg-neutral-fourth "
+            className="bg-neutral-third p-4 flex justify-between items-center cursor-pointer transition-all duration-200 hover:bg-neutral-fourth lg:w-2/5 lg:m-auto"
           >
             <p className="font-medium text-lg">LinkedIn</p>
             <ArrowUpRight className="text-primary" />
