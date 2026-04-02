@@ -2,6 +2,8 @@ import Project from "@/components/Project";
 import quranvoc from "@/images/quranvoc.jpg";
 import quranvocSite from "@/images/quranvoc-site.png";
 import waypicker from "@/images/waypicker.png";
+import buff from "@/images/buff-finder.png";
+import buffApp from "@/images/buff-app.jpg";
 import { ArrowUpRight } from "lucide-react";
 
 export default function Home() {
@@ -82,6 +84,33 @@ export default function Home() {
             projectName="WayPicker"
             projectDescription="Developed a native color picker application for Wayland desktop environments using GTK and C. This tool addresses the compatibility gap for color selection utilities in modern Linux desktop environments that use the Wayland display protocol."
             exploreUrl="https://github.com/melosshabi/wayland-color-picker"
+          />
+          <Project
+            image={buff}
+            skills={[
+              "Next.JS",
+              "Tailwind CSS",
+              "TypeScript",
+              "Express",
+              "ASP.NET Core",
+              "WebSockets",
+            ]}
+            projectName="Buff Finder"
+            projectDescription="A full-stack platform where local businesses post geo-tagged offers and customers discover and contact them in real time. Built with Next.js, TypeScript, Express, MongoDB, and WebSockets. Features include a real-time direct messaging system, dynamic offer feeds, and a clean business-facing dashboard for managing listings."
+            status="Discontinued"
+          />
+          <Project
+            image={buffApp}
+            skills={[
+              "React Native",
+              "TypeScript",
+              "WebSockets",
+              "Reanimated",
+              "ASP.NET Core",
+            ]}
+            projectName="Buff Finder (Mobile)"
+            projectDescription="The React Native companion to the Buff Finder web platform, extending the same geo-tagged offers experience to iOS and Android. Integrated Google Maps for location-aware offer discovery and WebSockets for live messaging. Built with React Native, TypeScript, ASP.NET Core, and MongoDB."
+            status="Discontinued"
           />
         </div>
       </section>

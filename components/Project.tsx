@@ -7,6 +7,7 @@ type Props = {
   projectName: string;
   projectDescription: string;
   exploreUrl?: string;
+  status?: string;
 };
 export default function Project({
   image,
@@ -14,6 +15,7 @@ export default function Project({
   projectName,
   projectDescription,
   exploreUrl,
+  status,
 }: Props) {
   return (
     <div className="bg-neutral-second rounded-lg pb-8 overflow-clip flex flex-col">
@@ -48,6 +50,9 @@ export default function Project({
           <h3 className="text-3xl mt-4 font-bold px-2">{projectName}</h3>
           <p className=" leading-7 mt-4 px-2">{projectDescription}</p>
         </div>
+        {status && (
+          <p className="text-sm mt-2 px-2 font-bold">Status: {status}</p>
+        )}
         {exploreUrl && (
           <a
             target="_blank"
