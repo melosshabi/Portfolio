@@ -1,4 +1,6 @@
 import Project from "@/components/Project";
+import pulse from "@/images/pulse.png";
+import iapi from "@/images/iap-i.png";
 import quranvoc from "@/images/quranvoc.jpg";
 import quranvocSite from "@/images/quranvoc-site.png";
 import waypicker from "@/images/waypicker.png";
@@ -57,6 +59,33 @@ export default function Home() {
           <span className="opacity-40">Experiences</span>
         </h2>
         <div className="mt-8 flex flex-col gap-12 md:grid md:grid-cols-2 lg:grid-cols-3 lg:gap-3">
+          <Project
+            image={pulse}
+            skills={[
+              "Next.js",
+              "TypeScript",
+              "C#",
+              "ASP.NET Core",
+              "PostreSQL",
+            ]}
+            projectName="Pulse"
+            projectDescription="Pulse is an open source, privacy-focused web analytics platform built for developers. Drop a lightweight script on any website and get a real-time dashboard showing page views, top pages, referrers, devices, browsers and countries, no cookies, no GDPR headaches, no Google."
+            exploreUrl="https://pulse.velovix.com"
+          />
+          <Project
+            image={iapi}
+            skills={[
+              "Next.js",
+              "TypeScript",
+              "C#",
+              "ASP.NET Core",
+              "WebSockets",
+              "MongoDB",
+            ]}
+            projectName="IAP-I"
+            projectDescription="A full-stack platform built for an NGO client, featuring a public-facing site where visitors can browse available courses, trainings and internships, alongside a full admin dashboard for managing all content. Image uploads are handled via Cloudinary with real-time upload progress tracked over WebSockets."
+            exploreUrl="https://iap-i.com"
+          />
           <Project
             image={quranvoc}
             skills={[
