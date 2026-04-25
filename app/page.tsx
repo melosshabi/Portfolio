@@ -4,6 +4,7 @@ import iapi from "@/images/iap-i.png";
 import quranvoc from "@/images/quranvoc.jpg";
 import quranvocSite from "@/images/quranvoc-site.png";
 import waypicker from "@/images/waypicker.png";
+import sysmon from "@/images/sysmon.png";
 import buff from "@/images/buff-finder.png";
 import buffApp from "@/images/buff-app.jpg";
 import { ArrowUpRight } from "lucide-react";
@@ -13,12 +14,15 @@ export default function Home() {
     <div className="py-22">
       <main className="min-h-[50dvh] flex items-center justify-center">
         <div className="flex flex-col items-start px-8 gap-1 lg:w-140">
-          <p className="text-primary font-semibold 2xl:text-3xl">Hi, I'm</p>
+          <p className="text-primary font-semibold 2xl:text-3xl">
+            Hi, I&apos;m
+          </p>
           <h1 className="text-5xl font-extrabold uppercase 2xl:text-6xl">
             Melos <br /> <span className="text-primary">Shabi</span>
           </h1>
           <p className="sm:w-3/5 lg:w-full 2xl:text-lg">
-            I'm a <span className="text-primary">Full Stack Developer</span>{" "}
+            I&apos;m a{" "}
+            <span className="text-primary">Full Stack Developer</span>{" "}
             specializing in Crafting Digital Experiences with Code. Specializing
             in high-performance architecture and immersive visual interfaces.
           </p>
@@ -108,6 +112,13 @@ export default function Home() {
             exploreUrl="https://www.quranvoc.com"
           />
           <Project
+            image={sysmon}
+            skills={["C", "GTK", "Cairo"]}
+            projectName="System Monitor"
+            projectDescription="A lightweight system monitor built with GTK4 and Cairo in C. Reads CPU usage, memory consumption, and disk utilization directly from the Linux kernel via /proc/stat, /proc/meminfo, and /proc/mounts, and renders real-time circular gauges and progress bars updated every 500ms."
+            exploreUrl="https://github.com/melosshabi/sysmon"
+          />
+          <Project
             image={waypicker}
             skills={["C", "GTK"]}
             projectName="WayPicker"
@@ -146,7 +157,7 @@ export default function Home() {
       {/*Contact*/}
       <section className="px-8 mt-24 scroll-mt-18" id="contact">
         <h2 className="uppercase mt-2 text-3xl font-bold text-center">
-          Let's Collaborate
+          Let&apos;s Collaborate
         </h2>
         <a
           href="mailto:melosshabi@protonmail.com"
